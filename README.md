@@ -38,7 +38,7 @@ You should see a new browser tap opening and a title in http://127.0.0.1:8080.
 
 ***Note:*** 
   - *Always run the website with the zoom set to 100%*
-  - The processed data can found in the folder project/data
+  - The processed data can found in the folder 'project/data'
 
 ## License
 

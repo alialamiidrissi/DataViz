@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>EPFViz</title>
+    <link rel="stylesheet" type="text/css" href="leaflet.css" />
+    <link rel="stylesheet" type="text/css" href="dc.css" />
+    <link rel="stylesheet" type="text/css" href="d3.slider.css" media="screen" />
+    <link href="c3.css" rel="stylesheet" />
+</head>
+
+<body>
+    <table class='table-container'>
+        <tbody>
+            <tr>
+                <td colspan=3>
+                    <div class="viz_caption">
+                    </div>
+                    <div class="toolbox">
+                        <button class="tool-but" id="discover">Discover</button>
+                        <button class="tool-but" id="reset-filter">Reset</button>
+                    </div>
+                    <div class="clear"></div>
+                    <div id="discover_text">
+                        &nbsp;
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="total_student_count" style="vertical-align:top;">
+                    </div>
+                </td>
+                <td>
+                    <div class='title'>
+                        <center>Number of students </center>
+                    </div>
+                </td>
+                <td>
+                    <div id=section-banner>
+                        <div class='title'>
+                            <center>Faculties/ Majors</center>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="gender_ratio">
+                        <div id="svg_male">
+                        </div>
+                        <div class="male_ratio">
+                        </div>
+                    </div>
+                    <div class="gender_ratio" click="false">
+                        <div id="svg_female">
+                        </div>
+                        <div class="female_ratio">
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="timeseries_chart" id="evolution_chart">
+                    </div>
+                    <div id="slidecontainer">
+                        <div id='back-button' style="display:inline;"></div>
+                        <div id='year-display' style="display:inline;"></div>
+                        <div id='forward-button' style="display: inline;"></div>
+                    </div>
+                </td>
+                <td>
+                    <canvas class="section_chart" id="section_chart">
+                    </canvas>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <div class='title'>
+                        Proportion of bachelor and master students
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <canvas id="level_chart">
+                    </canvas>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <div class='title'>
+                        <center>Number of students per country</center>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <div id="map"> </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div class='section_barchart'>
+    </div>
+    <script type="text/javascript" src="bundle.js"></script>
+</body>
+
+</html>

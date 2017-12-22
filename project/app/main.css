@@ -1,3 +1,4 @@
+.html
 /* Loading fonts */
 
 @font-face {
@@ -6,6 +7,7 @@
     font-weight: normal;
     font-style: normal;
 }
+
 
 @font-face {
     font-family: 'BarlowSemiCondensed';
@@ -21,7 +23,6 @@
     font-style: normal;
 }
 
-
 /* General css */
 
 body {
@@ -31,6 +32,7 @@ body {
     margin: 0px;
     height: 100%;
     width: 100%;
+    background-color: #f5f5f5;
 }
 
 .clear {
@@ -45,7 +47,7 @@ div {
     display: block;
 }
 
-
+/*Gender componentsCSS*/
 
 #gender_ratio {
     position: relative;
@@ -55,23 +57,55 @@ div {
 #svg_male svg,
 #svg_female svg {
     width: 100px;
-    height: 100px;
+    height: 100%;
 }
 
+#back-button svg,
+#forward-button svg {
+    width: 25px;
+    height: 25px;
+}
+
+
+
+
 .gender_ratio {
-    margin:auto;
+    margin: auto;
     position: relative;
     width: 100px;
-    margin-top: 20px;
+    margin-top: 15px;
 }
 
 .female_ratio,
 .male_ratio {
-    font-size: 15pt;
     text-align: center;
 }
 
+#svg_male svg:hover,
+#svg_female svg:hover {
+    filter: grayscale(0.5);
+    cursor: pointer;
+}
+
+
+/*chart titles CSS*/
+
+.center_text {
+    text-align: center;
+}
+
+.title {
+    /*display:none;*/
+    font-size: 15pt;
+}
+
+.title_2 {
+
+    font-size: 10pt;
+}
+
 /* Sections */
+
 .Sections {
 
     float: right;
@@ -79,50 +113,66 @@ div {
     /* needed for IE 6 */
 }
 
+.section_chart {
+    width: 300px;
+    max-width: 300px;
+    max-height: 280px;
+}
+
 .textSectionsDivs {
     text-align: center;
     font: 14px/16px Arial, Helvetica, sans-serif;
-}
-
-.GaugesSectionsDivs {
-    padding-right: 3em;
 }
 
 /* Table container */
 
 .table-container {
     position: relative;
-    /*max-width: 1100px;
-    width: 1100px;*/
+    max-width: 1100px;
+    width: 1100px;
     margin: auto;
-    border: 1px solid black;
 }
 
 td {
     vertical-align: top;
-    border: 1px solid black;
+    /*border:1px solid #000;*/
 }
 
-.timeseries_chart{
+table {
+    table-layout: auto;
+    border-collapse: collapse;
     width: 100%;
 }
 
-/* Section chart */
-#level_chart {
-    position: relative;
-    height: 100px  ;
-    max-height: 100px;
+.timeseries_chart {
+    width: 670px;
+    height: 240px;
 }
 
 
+/* type chart */
+
+#level_chart {
+    position: relative;
+    height: 60px;
+    max-height: 60px;
+
+}
+
+#level_chart:hover,.timeseries_chart:hover,.section_chart:hover {
+    cursor: pointer;
+
+}
 
 /* Caption + Toolbox*/
 
 .viz_caption {
     position: relative;
     float: left;
+
     font-size: 20pt;
     font-weight: bold;
+    padding-left: 20px;
 }
 
 .toolbox {
@@ -149,12 +199,13 @@ td {
     opacity: 0.9;
 }
 
+
 /* Map container */
 
 .table-container td #map {
     position: relative;
-    height: 350px;
-    width: 700px;
+    /*height: 300px;*/
+    width: 600px;
 }
 
 .info_legend {
@@ -174,7 +225,7 @@ td {
 
 #map {
     width: 600px;
-    height: 600px;
+    height: 300px;
     margin: 0 auto;
     background-color: rgba(255, 0, 0, 0.0);
 }
@@ -190,9 +241,8 @@ td {
     height: 18px;
     float: left;
     margin-right: 8px;
-    opacity: 0.7;
+    opacity: 1;
 }
-
 
 /* Overriding c3 css */
 
@@ -204,26 +254,6 @@ td {
     display: none;
 }
 
-
-/* Slide */
-.slider{
-    position:relative;
-    padding-top:15px;
-    padding-left:25px;
-    width:100%;
-    height:20px;
-    margin-bottom:15px;
-}
-
-/* Total student */
-
-.total_student_count {
-    position: relative;
-    font-size: 50pt;
-    font-weight: lighter;
-    text-align: center;
-}
-
 .c3-chart-arcs-title {
 
     overflow: scroll;
@@ -233,5 +263,102 @@ td {
     background: rgba(255, 255, 255, 0.8);
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
+}
 
+
+/*Discover CSS*/
+
+#discover_text {
+    padding-left: 20px;
+    padding-top: 10px;
+    /*opacity:0;*/
+}
+
+
+
+
+/* Slider CSS */
+
+#slidecontainer {
+    width: auto;
+    text-align: center;
+}
+#year-display {
+   vertical-align: super
+}
+
+ #slidecontainer svg:hover  { 
+
+  filter: grayscale(0.5);
+  cursor: pointer;
+}
+
+
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 5px;
+    border-radius: 5px;
+    background: red;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #D80027;
+    cursor: pointer;
+}
+
+
+.slider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #D80027;
+    cursor: pointer;
+}
+
+
+
+/* Total student */
+
+.total_student_count {
+    position: relative;
+    font-size: 30pt;
+    font-weight: lighter;
+    text-align: center;
+}
+
+
+
+.opacity-change {
+    opacity: 0.1;
+}
+
+
+
+/*CSS popups*/
+
+.popup{
+    position:absolute;
+    background:rgba(0,0,0,0.5);
+    border-radius: 5px;
+    color:#FFF;
+    padding:5px;
+    cursor: default;
+    z-index:9999;
+}
+.popup:hover{
+    opacity:0.5;
+}
+
+.discover-text{
+    font-weight: bold;
 }

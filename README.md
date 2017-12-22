@@ -1,4 +1,7 @@
-This repo contains boilerplate code for a d3 viz.
+## EPFL students visualization
+
+Our visualisation is an attempt to recreate a complex version of the old CAMIPRO by showing different statistics about EPFL students. It targets EPFL people who are interested in getting insights about their school and future EPFL members who want to have an idea about its diversity and students’ distribution.
+It's main purpose is to show the internalisation of EPFL, as well as the evolution of student’s number. Our graphical interface is also designed in such way to highlight the sections with most students throughout time
 
 To use on your project first install [Node.js](https://nodejs.org/en/)
 

@@ -1,5 +1,9 @@
 ## EPFL students visualization
 
+### Team members
+  - Ali Alami-Idrissi
+  - Ali Benlalah
+  - Zakaria Fikrat
 ### Visualization website
 https://alioben.github.io
 
